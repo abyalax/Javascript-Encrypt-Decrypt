@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        background-color: rgba(25, 25, 25, 1.0);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+        color: white;
+        margin: 10px;
+    }
+    p {
+        margin: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        margin-left: 10px;
+        /* height: 100vh; */
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    .formtext {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        margin-left: 10px;
+    }
+
+    label {
+        color: white;
+    }
+
+    input {
+        width: 300px;
+        height: 30px;
+        font-size: medium;
+        font-weight: bold;
+    }
+    
+    textarea {
+        width: 300px;
+        height: 30px;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        margin: 10px;
+        width: 100px;
+        height: 30px;
+        background-color: rgba(25, 25, 25, 1.0);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: medium;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: rgba(25, 25, 25, 1.0);
+    }
+
+    .btn.submit {
+        margin: 10px;
+        width: 100px;
+        height: 35px;
+        background-color: rgba(26, 14, 155, .5);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    .btn.submit:hover {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <h1>Encrypt dan Decrypt</h1>
+    <p>Masukkan text untuk dilakukan enkripsi</p>
+    <div>
+        <form action="onsubmit" id="form">
+            <div class="formtext">
+                <input type="text" id="text">
+                <!-- <button id="submit" class="btn submit">Submit</button> -->
+            </div>
+        </form>
+    </div>
+    <div class="wrapper">
+        <button id="encrypt-btn" class="btn">Encrypt</button>
+        <textarea name="encrypt" id="encrypt"></textarea>
+        <button id="decrypt-btn" class="btn">Decrypt</button>
+        <textarea name="decrypt" id="decrypt"></textarea>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
